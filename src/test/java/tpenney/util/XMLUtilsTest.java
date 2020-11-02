@@ -84,6 +84,7 @@ public class XMLUtilsTest {
     /**
      * Tests unmarshall without a schema validation.
      */
+    @Ignore
     @Test
     public void testUnmarshall() throws Exception {
         Stocks stocks = XMLUtils.unmarshall(xmlStocks, Stocks.class);
@@ -93,6 +94,7 @@ public class XMLUtilsTest {
     /**
      * Tests unmarshall with a schema validation.
      */
+    @Ignore
     @Test
     public void testUnmarshallWithSchemaValidation()throws Exception {
         Stocks stocks = XMLUtils.unmarshall(xmlStocks, Stocks.class, "/xml/stock_info.xsd");
@@ -132,6 +134,7 @@ public class XMLUtilsTest {
     /**
      * Adds a list of quotes and then executes asserts using a known quote index.
      */
+    @Ignore
     @Test
     public void testAddListOfQuotes() throws UnknownStockSymbolException, InvalidXMLException {
 
