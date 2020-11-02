@@ -1,0 +1,13 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: 'circleci/openjdk:latest' # the primary container, where your job's commands are run
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello cruel world" # run the `echo` command
+      - run: mvn test -f pom.xml
+      - store_test_results:
+          path: target/surefire-reports
+      - store_artifacts:
+          path: target/my-reports
